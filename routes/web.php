@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,4 +75,12 @@ Route::post('/posts/{post}/likes', [
 Route::delete('/posts/{post}/likes', [
     PostLikeController::class, 'destroy'
 ])->name('posts.likes');
+
+Route::post('/posts/{post}/comments', [
+    CommentController::class, 'store'
+])->name('posts.comments');
+
+Route::delete('/posts/comments/{comment}', [
+    CommentController::class, 'destroy'
+])->name('comments.delete');
 
