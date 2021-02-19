@@ -1,6 +1,6 @@
 @props(['comment' => $comment])
 <div class="mb-4">
-    <a href="" class="font-medium">{{ $comment->user->username }}</a> <span
+    <a href="{{ route('user.posts', $comment->user) }}" class="font-medium">{{ $comment->user->username }}</a> <span
         class="text-gray-600 text-xs">{{ $comment->created_at->diffForHumans() }}</span>
     <p class="mb-2 text-sm">{{ $comment->body }}</p>
 
