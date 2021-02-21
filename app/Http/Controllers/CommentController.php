@@ -19,7 +19,7 @@ class CommentController extends Controller
         $this->validate($request, [
             'body' => 'required',
         ]);
-
+        //dd($post);
         $post->comments()->create([
             'body' => $request->body,
             'post_id' => $post->id,
