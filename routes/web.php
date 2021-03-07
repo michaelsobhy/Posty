@@ -6,7 +6,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\PostLikeController;
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CommentController;
 
@@ -69,11 +69,11 @@ Route::delete('/posts/{post}', [
 ])->name('posts.delete');
 
 Route::post('/posts/{post}/likes', [
-    PostLikeController::class, 'store'
+    LikeController::class, 'store'
 ])->name('posts.likes');
 
 Route::delete('/posts/{post}/likes', [
-    PostLikeController::class, 'destroy'
+    LikeController::class, 'destroy'
 ])->name('posts.likes');
 
 Route::post('/posts/{post}/comments', [

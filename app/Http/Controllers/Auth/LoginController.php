@@ -22,7 +22,7 @@ class LoginController extends Controller
         //validation
         $this->validate($request, [
             'email' => 'required|email',
-            'password' => 'required' //automatically checks for 'password' and 'password_confirmation'
+            'password' => 'required'
         ]);
 
         if (!auth()->attempt($request->only('email', 'password'), $request->remember)) {
