@@ -13,6 +13,9 @@
 <nav class="p-6 bg-white flex justify-between mb-6">
     <ul class="flex items-center">
         <li>
+            <a href="{{ route('home') }}" class="p-3 mr-3 font-bold"><em>POSTY</em></a>
+        </li>
+        <li>
             <a href="{{ route('home') }}" class="p-3">Home</a>
         </li>
         <li>
